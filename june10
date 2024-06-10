@@ -57,6 +57,18 @@ INSERT INTO students (id, name, age, gender) VALUES
 (48, 'Ishaan', 22, 'M'),
 (49, 'Nikita', 23, 'F'),
 (50, 'Raj', 20, 'M');
+INSERT INTO students (id, name, age, gender) VALUES
+(51, NULL, 20, NULL),
+(52, 'Lakshmi', NULL, 'F'),
+(53, 'Nikhil', 22, NULL),
+(54, NULL, 23, 'M'),
+(55, 'Rina', NULL, NULL),
+(56, NULL, 21, 'F'),
+(57, 'Akash', NULL, NULL),
+(58, NULL, NULL, 'M'),
+(59, 'Tina', 20, NULL),
+(60, NULL, NULL, NULL);
+
 
 
 --trying select querries for student table 
@@ -116,6 +128,37 @@ select * from students order by (gender,name,age)
 
 	--order by both ascending and descending 
 select * from students order by name asc ,age desc
+
+
+--NULL 
+select * from students where name is null
+select * from students where age is null
+select * from students where gender is null
+
+
+--or
+select * from students where age is null or gender is null
+select * from students where age is null or name is null
+select * from students where age is null or name is null or gender is null
+
+--and 
+select * from students where age is null and gender is null
+select * from students where age is null and gender is null and name is null
+
+
+--NOT
+select * from students where name is not null
+select * from students where age is not null
+select * from students where gender is not null
+select * from students where name not like 'S%'
+select * from students where age not between 21 and 24
+select * from students where not age>22
+select * from students where not age>=22
+select * from students where not age<=22
+
+	
+--Both and Or
+select * from students where age=22 and (name like 'B%' or name like 'S%')
 
 
 
