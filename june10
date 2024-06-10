@@ -69,6 +69,9 @@ INSERT INTO students (id, name, age, gender) VALUES
 (59, 'Tina', 20, NULL),
 (60, NULL, NULL, NULL);
 
+--insert into specific columns 
+insert into students values (61,'aniket',25,'M')
+insert into students(id,name) values (62,'Shruti')
 
 
 --trying select querries for student table 
@@ -134,7 +137,8 @@ select * from students order by name asc ,age desc
 select * from students where name is null
 select * from students where age is null
 select * from students where gender is null
-
+select * from students where name is not null
+select * from students where name 
 
 --or
 select * from students where age is null or gender is null
@@ -161,6 +165,24 @@ select * from students where not age<=22
 select * from students where age=22 and (name like 'B%' or name like 'S%')
 
 
+
+
+
+--Update	
+update students set name='Aniket' where id=61
+
+
+
+
+--Delete
+delete from students --this will delete all the records from the table 
+delete from students where name='Shruti'
+drop students 
+
+
+	
+
+select * from students
 
 
 
