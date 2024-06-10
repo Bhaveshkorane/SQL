@@ -184,6 +184,16 @@ drop students
 
 select * from students
 
+--Top 
+select TOP 3 * from students
+select 
+
+
+--Limit
+select * from students order by age asc limit 3
+select * from students order by age desc limit 3
+select * from students fetch first 50 percent rows only
+
 
 
 
