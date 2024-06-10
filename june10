@@ -83,8 +83,41 @@ select gender,count(gender) as total from students group by gender
 --max function 
 select gender,max(age) as maxAge from students group by gender
 select gender,min(age) as maxAge from students group by gender
-
 select gender,avg(age) as maxAge from students group by gender
+
+
+--where clause 
+select * from students where students.age>23
+select * from students where students.age<23
+select * from students where students.age=23
+select * from students where students.age<=23
+select * from students where students.age>=23
+select * from students where students.age<>23--not equal to 
+select * from students where students.age between 21 and 23
+select * from students where students.age in (21,24)
+select * from students where name like 'S%'
+select * from students where name like '%s%'
+select * from students where name like '%i'
+select * from students where name like '%a'
+
+
+--Order by clause
+
+select * from students order by name
+select * from students order by name desc 
+select * from students order by age 
+
+	--order by several columns 
+select * from students order by (name,age) 
+select * from students order by (age,name) 
+select * from students order by (name,age,gender)
+select * from students order by (name,gender,age)
+select * from students order by (gender,name,age)
+
+	--order by both ascending and descending 
+select * from students order by name asc ,age desc
+
+
 
 
 
