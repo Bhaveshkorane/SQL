@@ -1,0 +1,3 @@
+--database used here is dvd rental system database present on the official site of postgres
+select * from actor
+sele
