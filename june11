@@ -1,3 +1,13 @@
 --database used here is dvd rental system database present on the official site of postgres
 select * from actor
-sele
+select count(actor_id) from actor 
+select count(*) from actor 
+select * from city
+
+--sum
+
+select * from payment
+
+select customer_id,sum(amount) total bill  from payment group by customer_id
+
+
